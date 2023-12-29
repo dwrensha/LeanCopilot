@@ -54,8 +54,9 @@ def isArm! : IO Bool := do
 
 
 def hasCUDA : IO Bool := do
-  let out ← IO.Process.output {cmd := "which", args := #["nvcc"], stdin := .null}
-  return out.exitCode == 0
+  return false
+--  let out ← IO.Process.output {cmd := "which", args := #["nvcc"], stdin := .null}
+--  return out.exitCode == 0
 
 
 def useCUDA : IO Bool := do
